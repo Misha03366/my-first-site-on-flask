@@ -5,8 +5,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return render_template('hello.html')
+    return "<h1>Работает!</h1><p>Сайт запущен</p>"
 
 
 if __name__ == "__main__":
     app.run()
+
