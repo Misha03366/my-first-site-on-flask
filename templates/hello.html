@@ -5,8 +5,22 @@
     <link rel = "stylesheet" href="css.css">
     <title>Пыточный Механизм</title>
     <title>{% block title %}{% endblock %}</title>
+    <style>
+        body {
+            background-image: url('/static/background.jpg');
+            background-size: cover;
+        }
+        .white-card {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 50px auto;
+        }
+    </style> 
 </head>
-<div>
+<body>
+<div class="white-card">
     <h1>Сайт группы Пыточный Механизм</h1>
     <p>Пупупу
     </p>
@@ -14,4 +28,5 @@
     </p>
 </div>
 </body>
+
 </html>
