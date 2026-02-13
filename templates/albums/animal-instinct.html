@@ -20,10 +20,22 @@
             margin: 300px auto;
             min-height: 1000px;
         }
-        .top-left-image {
+        .image-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .image-row img {
             width: 400px;
             height: 400px;
-            margin: 10px 0 20px 10px;
+            object-fit: cover;
+        }
+        .text-block h2 {
+            margin: 0 0 10px 0;
+        }
+        .text-row p {
+            margin: 0;
+            color: #666;
         }
     </style>
 </head>
@@ -32,10 +44,16 @@
     <a href="/">
         <button>На главную</button>
     </a>
-    <img src="/static/animal-instinct.jpg" class="top-left-image">
+    <div class="image-row">
+        <img src="/static/animal-instinct.jpg" alt="Описание">
+        <div class="text-block">
+            <h2>Альбом Животный интстинкт Rebuild</h2>
+            <p>Описание</p>
+        </div>
     <h1>Альбом Животный интстинкт</h1>
 </div>
 </body>
 
 </html>
+
 
