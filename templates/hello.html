@@ -34,12 +34,22 @@
             border-right: 2px solid black;
             box-sizing: border-box;
             text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 500px;
+        }
+        .left-selection .menu-items {
+            margin-bottom: 100px;
         }
         .right-selection {
             width:  75%;
             padding: 40px;
             box-sizing: border-box;
-            text-align: center;
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
         }
         .left-selection p {
             margin: 20px 0;
@@ -59,12 +69,14 @@
 <body>
     <div class="white-card">
         <div class="left-selection">
-            <p>
-                <a href="/discography">Дискография</a>
-            </p>
-            <p>
-                <a href="/albums">Альбомы</a>
-            </p>
+            <div class="menu-items">
+                <p>
+                    <a href="/discography">Дискография</a>
+                </p>
+                <p>
+                    <a href="/albums">Альбомы</a>
+                </p>
+            </div>
         </div>
         <div class="right-selection">
             <h1>Сайт группы Пыточный Механизм</h1>
@@ -73,6 +85,7 @@
 </body>
 
 </html>
+
 
 
 
