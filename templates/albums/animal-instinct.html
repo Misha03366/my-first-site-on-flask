@@ -9,14 +9,24 @@
             background-position: center;
             background-attachment: fixed;
             background-size: cover;
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            box-sizing: border-box;
         }
         .white-card {
             background: white;
-            padding: 40px;
             border-radius: 10px;
-            max-width: 800px;
-            margin: 300px auto;
+            max-width: 1200px;
+            width: 100%;
             min-height: 1000px;
+            padding: 40px;
+            margin-top: 300px;
+            margin-bottom: 50px;
         }
         .image-row {
             display: flex;
@@ -29,11 +39,15 @@
             object-fit: cover;
         }
         .text-block  {
-            flex: 1;
             width: 100%;
             word-warp: break-word;
             min-width: 0;
             margin: 0 0 10px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
         }
         .text-row p {
             margin: 0;
@@ -64,6 +78,7 @@
 </body>
 
 </html>
+
 
 
 
