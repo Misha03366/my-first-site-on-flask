@@ -4,71 +4,127 @@
     <meta charset="UTF-8">
     <link rel = "stylesheet" href="css.css">
     <title>Пыточный Механизм альбомы</title>
-    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <style>
         body {
             background-image: url('/static/background.jpg');
             background-position: center;
             background-attachment: fixed;
             background-size: cover;
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            box-sizing: border-box;
         }
         .white-card {
             background: white;
-            padding: 40px;
             border-radius: 10px;
-            max-width: 800px;
-            margin: 300px auto;
+            max-width: 1200px;
+            width: 100%;
             min-height: 1000px;
+            padding: 40px;
+            margin-top: 300px;
+            margin-bottom: 50px;
+        }
+        .back-link {
+            margin-bottom: 30px;
+        }
+        .black-link a {
+            text-decoration: none;
+            color: #666;
+            font-size: 16px;
+        }
+        .back-link a:hover {
+            color: #000;
+            font-weught: bolf;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #444;
+            margin: 40px 0 20px 0;
+        }
+        .album-links p {
+            margin: 15px 0;
+        }
+        .album-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            display: inline-block;
+            width: 200px;
+        }
+        
+        .album-links a:hover {
+            color: #000;
+            font-weight: bold;
+        }
+        
+        .poligon-section {
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
     <div class="white-card">
-        <a href="/">
-            <button>На главную</button>
-        </a>
+        <div class="black-link">
+            <a href="/">На главную</a>
+        </div>
         <h1>Альбомы группы Пыточный Механизм</h1>
-        <p>
-            <a href="/albums/animal-instinct">1. Животный инстинкт</a>
-        </p>
-        <p>
-            <a href="/albums/matter-is-power">2. Материя - сила</a>
-        </p>
-        <p>
-            <a href="/albums/shadows-of-victory">3. Тени победы</a>
-        </p>
-        <p>
-            <a href="/albums/beyond-the-walls-of-the-system">4. За стенами системы</a>
-        </p>
-        <p>
-            <a href="/albums/kaleidoscopes-of-consciousness">5. Калейдоскопы сознания</a>
-        </p>
-        <p>
-            <a href="/albums/the-body-remembers-everything">6. Тело помнит все</a>
-        </p>
-        <p>
-            <a href="/albums/arsenal">7. Арсенал</a>
-        </p>
-        <p>
-            <a href="/albums/the-black-mirror">8. Чёрное зеркало</a>
-        </p>
-        <p>
-            <a href="/albums/the-babylonian-library">9. Вавилонская библиотека</a>
-        </p>
-        <p>
-            <a href="/albums/the-spiral-constellation">10. Созвездие спирали</a>
-        </p>
-        <p>
+        <div class="album-links">
+            <p>
+                <a href="/albums/animal-instinct">1. Животный инстинкт</a>
+            </p>
+            <p>
+                <a href="/albums/matter-is-power">2. Материя - сила</a>
+            </p>
+            <p>
+                <a href="/albums/shadows-of-victory">3. Тени победы</a>
+            </p>
+            <p>
+                <a href="/albums/beyond-the-walls-of-the-system">4. За стенами системы</a>
+            </p>
+            <p>
+                <a href="/albums/kaleidoscopes-of-consciousness">5. Калейдоскопы сознания</a>
+            </p>
+            <p>
+                <a href="/albums/the-body-remembers-everything">6. Тело помнит все</a>
+            </p>
+            <p>
+                <a href="/albums/arsenal">7. Арсенал</a>
+            </p>
+            <p>
+                <a href="/albums/the-black-mirror">8. Чёрное зеркало</a>
+            </p>
+            <p>
+                <a href="/albums/the-babylonian-library">9. Вавилонская библиотека</a>
+            </p>
+            <p>
+                <a href="/albums/the-spiral-constellation">10. Созвездие спирали</a>
+            </p>
+            <p>
             <a href="/albums/eternal-sleep">11. Вечный сон</a>
-        </p>
-        <p>
-            <a href="/albums/as-long-as-the-earth-turns">12. Покуда вертится земля</a>
-        </p>
-        <h1>Альбомы группы Полигон</h1>
-        <p>
-            <a href="/albums/catering">1. Общепит</a>
-        </p>
+            </p>
+            <p>
+                <a href="/albums/as-long-as-the-earth-turns">12. Покуда вертится земля</a>
+            </p>
+        </div>
+        <div class="poligon-section">
+            <h1>Альбомы группы Полигон</h1>
+            <div class="album-links">
+                <p>
+                    <a href="/albums/catering">1. Общепит</a>
+                </p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
+
 
