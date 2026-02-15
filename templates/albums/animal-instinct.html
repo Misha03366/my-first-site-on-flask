@@ -54,13 +54,54 @@
             margin: 0;
             color: #666;
         }
+        .back-link {
+            margin-bottom: 30px;
+        }
+        .back-link a {
+            text-decoration: none;
+            color: #666;
+            font-size: 16px;
+        }
+        .back-link a:hover{
+            color: #000;
+            font-size: 16px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 40px;
+            font-family:Arial, sans-serif;
+        }
+        .track-list p {
+            margin 15px 0 5px 0;
+            font-weight: bold;
+            color: #444;
+        }
+        .track-list a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            display: inline-block;
+            width: 200px;
+        }
+        
+        .track-list a:hover {
+            color: #000;
+            font-weight: bold;
+        }
+        
+        audio {
+            width: 100%;
+            margin-bottom: 25px;
+        }
     </style>
 </head>
 <body>
 <div class="white-card">
-    <a href="/">
-        <button>На главную</button>
-    </a>
+    <div class="back-link">
+        <a href="/albums">
+            <button>К альбомам</button>
+        </a>
+    </div
     <div class="image-row">
         <img src="/static/animal-instinct.jpg" alt="Описание">
         <div class="text-block">
@@ -74,11 +115,18 @@
             </p>
         </div>
     </div>
-    <h1>Альбом Животный интстинкт</h1>
+    <h1>Песни альбома Животный интстинкт</h1>
+    <div class="track-list">
+        <p>Животный инстинкт</p>
+        <audio controls>
+            <source src="/static/music/animal-instinct-rebuild/01 Zhivotnyj Instinkt.mp3" type="audio/mpeg">
+        </audio>
+    </div>
 </div>
 </body>
 
 </html>
+
 
 
 
