@@ -91,6 +91,14 @@
         .menu-link:hover {
             background: #f0f0f0;
         }
+        .full-image {
+            position: absoplute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     </style> 
 </head>
 <body>
@@ -99,9 +107,7 @@
             <div class="menu-items">
                 <div style="position: relative; display: inline-block;">
                     <a href="/discography" class="menu-link">Дискография</a>
-                    <img src="/static/ribbon.jpeg"
-                    style="position: absolute; top: -15px; right: -20px; width: 50px;"
-                    alt="В разработке">
+                    <img src="/static/ribbon.jpeg" class="ribbon-image" alt="В разработке">
                 </div>
                 <p>
                     <a href="/albums">Альбомы</a>
@@ -178,6 +184,7 @@
 </body>
 
 </html>
+
 
 
 
