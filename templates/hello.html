@@ -79,15 +79,29 @@
         .right-section h1 {
             margin-top: 0;
         }
+        .menu-link {
+            text-decoration: none;
+            color: #333;
+            font-size: 26;
+            display: inline-block;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .menu-link:hover {
+            background: #f0f0f0;
+        }
     </style> 
 </head>
 <body>
     <div class="white-card">
         <div class="left-section">
             <div class="menu-items">
-                <p>
-                    <a href="/discography">Дискография</a>
-                </p>
+                <div style="position: relative; display: inline-block;">
+                    <a href="/discography" class="menu-link">Дискография</a>
+                    <img src="/static/ribbon.jpeg"
+                    style="position: absolute; top: -15px; right: -20px; width: 50px;"
+                    alt="В разработке">
                 <p>
                     <a href="/albums">Альбомы</a>
                 </p>
@@ -163,6 +177,7 @@
 </body>
 
 </html>
+
 
 
 
