@@ -99,15 +99,30 @@
             height: 100%;
             object-fit: cover;
         }
+        .menu-item-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .ribbon-image {
+            position: absolute;
+            top: -15px;
+            right: -20px;
+            width: 50px;
+            height: auto;
+        }
     </style> 
 </head>
 <body>
     <div class="white-card">
         <div class="left-section">
             <div class="menu-items">
-                <div style="position: relative; display: inline-block;">
-                    <a href="/discography" class="menu-link">Дискография</a>
-                    <img src="/static/ribbon.jpeg" class="ribbon-image" alt="В разработке">
+                <div class="menu-items-wrapper">
+                    <div style="position: relative; display: inline-block;">
+                        <a href="/discography" class="menu-link">Дискография</a>
+                        <img src="/static/ribbon.jpeg" class="ribbon-image" alt="В разработке">
+                    </div>
                 </div>
                 <p>
                     <a href="/albums">Альбомы</a>
@@ -184,6 +199,7 @@
 </body>
 
 </html>
+
 
 
 
