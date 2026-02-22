@@ -2,33 +2,195 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel = "stylesheet" href="css.css">
     <title>Пыточный Механизм альбом За стенами системы</title>
-    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <style>
+        @font-face {
+            font-family: 'GOST2304';
+            src: url('/static/fonts/gost_2.304_Bold.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
         body {
+            font-family: 'GOST2304';
             background-image: url('/static/background.jpg');
             background-position: center;
             background-attachment: fixed;
             background-size: cover;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            box-sizing: border-box;
         }
         .white-card {
             background: white;
-            padding: 40px;
             border-radius: 10px;
-            max-width: 800px;
-            margin: 300px auto;
+            max-width: 1200px;
+            width: 100%;
             min-height: 1000px;
+            padding: 40px;
+            margin-top: 300px;
+            margin-bottom: 50px;
+        }
+        .image-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .image-row img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+        }
+        .text-block  {
+            width: 100%;
+            word-wrap: break-word;
+            min-width: 0;
+            margin: 0 0 10px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
+            font-size: 29px;
+        }
+        .text-row p {
+            margin: 0;
+            color: #666;
+        }
+        .back-link {
+            margin-bottom: 30px;
+        }
+        .back-link a {
+            text-decoration: none;
+            color: #666;
+            font-size: 20px;
+        }
+        .back-link a:hover{
+            color: #000;
+            font-size: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 40px;
+            font-family: 'GOST2304';
+        }
+        .track-list p {
+            margin: 15px 0 5px 0;
+            font-weight: bold;
+            color: #444;
+        }
+        .track-list a {
+            text-decoration: none;
+            color: #333;
+            font-size: 26px;
+            display: inline-block;
+            width: 200px;
+        }
+        
+        .track-list a:hover {
+            color: #000;
+            font-weight: bold;
+        }
+        
+        audio {
+            width: 100%;
+            margin-bottom: 25px;
         }
     </style>
 </head>
 <body>
 <div class="white-card">
-    <h1>Альбом За стенами системы</h1>
-    <a href="/">
-        <button>На главную</button>
-    </a>
+    <div class="back-link">
+        <a href="/albums">
+            К альбомам
+        </a>
+    </div>
+    <div class="image-row">
+        <img src="/static/animal-instinct.jpg" alt="Описание">
+        <div class="text-block">
+            <h2>Альбом За стенами системы</h2>
+            <p>
+                За стенами системы - 4й альбом, создан в 2024г. Система говорит с нами посредством своего языка, он же - коллаж из вырезанных букв.
+                Небо сквозь сосны это неочевидный выход из "колючей" системы, но увы система - это тот же самый лес, который фильтрует - позволяет небесный свет,
+                как и купол неба - лишь грань человеческого, камерного воприятия свободы в рамках заключения собственного разума и никак иначе.
+                Неоднократно перезаписывался, имел корни в проекте "Полигон".
+                
+            </p>
+        </div>
+    </div>
+    <h1>Песни альбома За стенами системы</h1>
+    <div class="track-list">
+        <p>За стенами системы</p>
+        <audio controls>
+            <source src="/static/music/animal-instinct-rebuild/01%20Zhivotnyj%20Instinkt.mp3" type="audio/mpeg">
+        </audio>
+        <p>Тихий час</p>
+        <audio controls>
+            <source src="/static/music/animal-instinct-rebuild/02%20Tihij%20chas.mp3" type="audio/mpeg">
+        </audio>
+        <p>На перегонки с собой</p>
+        <audio controls>
+            <source src="/static/music/animal-instinct-rebuild/03%20Na%20peregonki%20s%20soboj.mp3" type="audio/mpeg">
+        </audio>
+        <p>Героический подвиг</p>
+        <audio controls>
+            <source src="/static/music/animal-instinct-rebuild/04%20Geroicheskij%20podvig.mp3" type="audio/mpeg">
+        </audio>
+        <p>Атрофированный взгляд</p>
+        <audio controls>
+            <source src="/static/music/animal-instinct-rebuild/05%20Atrofirovannyj%20vzglyad.mp3" type="audio/mpeg">
+        </audio>
+        <p>Фауст обмана</p>
+        <audio controls>
+            <source src="/static/music/animal-instinct-rebuild/06%20Faust%20obmana.mp3" type="audio/mpeg">
+        </audio>
+        <p>Грани мышления</p>
+        <audio controls>
+            <source src="/static/music/animal-instinct-rebuild/07%20Grani%20myshleniya.mp3" type="audio/mpeg">
+        </audio>
+        <p>По умолчания</p>
+        <audio controls>
+            <source src="/static/music/animal-instinct-rebuild/08%20Po%20umolchaniyu.mp3" type="audio/mpeg">
+        </audio>
+        <p>Облачный ров</p>
+        <audio controls>
+            <source src="/static/music/animal-instinct-rebuild/09%20Oblachnyj%20rov.mp3" type="audio/mpeg">
+        </audio>
+        <p>Триумфальный оргазм</p>
+        <audio controls>
+            <source src="/static/music/animal-instinct-rebuild/10%20Triumfalnyj%20orgazm.mp3" type="audio/mpeg">
+        </audio>
+        <p>Все путем</p>
+        <audio controls>
+            <source src="/static/music/animal-instinct-rebuild/11%20Vsyo%20putyom.mp3" type="audio/mpeg">
+        </audio>
+        <p>Анархия гравитации</p>
+        <audio controls>
+            <source src="/static/music/animal-instinct-rebuild/12%20Anarhiya%20gravitacii.mp3" type="audio/mpeg">
+        </audio>
+        <p>Военный гранит</p>
+        <audio controls>
+            <source src="/static/music/animal-instinct-rebuild/13%20Voennyj%20granit.mp3" type="audio/mpeg">
+        </audio>
+        <p>Из ниоткуда в никуда</p>
+        <audio controls>
+            <source src="/static/music/animal-instinct-rebuild/14%20Iz%20niotkuda%20v%20nikuda.mp3" type="audio/mpeg">
+        </audio>
+        <p>Песни желтого ветра</p>
+        <audio controls>
+            <source src="/static/music/animal-instinct-rebuild/15%20Pesni%20zhyoltogo%20vetra.mp3" type="audio/mpeg">
+        </audio>
+        <p>Остаться другим</p>
+        <audio controls>
+            <source src="/static/music/animal-instinct-rebuild/16%20Ostatsya%20drugim.mp3" type="audio/mpeg">
+        </audio>
+    </div>
 </div>
 </body>
 
 </html>
+
