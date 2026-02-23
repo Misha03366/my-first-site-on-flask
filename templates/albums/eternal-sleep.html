@@ -2,32 +2,161 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel = "stylesheet" href="css.css">
     <title>Пыточный Механизм альбом Вечный сон</title>
-    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <style>
+        @font-face {
+            font-family: 'GOST2304';
+            src: url('/static/fonts/gost_2.304_Bold.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
         body {
+            font-family: 'GOST2304';
             background-image: url('/static/background.jpg');
             background-position: center;
             background-attachment: fixed;
             background-size: cover;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            box-sizing: border-box;
         }
         .white-card {
             background: white;
-            padding: 40px;
             border-radius: 10px;
-            max-width: 800px;
-            margin: 300px auto;
+            max-width: 1200px;
+            width: 100%;
             min-height: 1000px;
+            padding: 40px;
+            margin-top: 300px;
+            margin-bottom: 50px;
+        }
+        .image-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .image-row img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+        }
+        .text-block  {
+            width: 100%;
+            word-wrap: break-word;
+            min-width: 0;
+            margin: 0 0 10px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
+            font-size: 29px;
+        }
+        .text-row p {
+            margin: 0;
+            color: #666;
+        }
+        .back-link {
+            margin-bottom: 30px;
+        }
+        .back-link a {
+            text-decoration: none;
+            color: #666;
+            font-size: 20px;
+        }
+        .back-link a:hover{
+            color: #000;
+            font-size: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 40px;
+            font-family: 'GOST2304';
+        }
+        .track-list p {
+            margin: 15px 0 5px 0;
+            font-weight: bold;
+            color: #444;
+        }
+        .track-list a {
+            text-decoration: none;
+            color: #333;
+            font-size: 26px;
+            display: inline-block;
+            width: 200px;
+        }
+        
+        .track-list a:hover {
+            color: #000;
+            font-weight: bold;
+        }
+        
+        audio {
+            width: 100%;
+            margin-bottom: 25px;
         }
     </style>
 </head>
 <body>
 <div class="white-card">
-    <h1>Альбом Вечный сон</h1>
-    <a href="/">
-        <button>На главную</button>
-    </a>
+    <div class="back-link">
+        <a href="/albums">
+            К альбомам
+        </a>
+    </div>
+    <div class="image-row">
+        <img src="/static/Eternal-sleep.jpg" alt="Описание">
+        <div class="text-block">
+            <h2>Альбом Вечный сон</h2>
+            <p>
+                Вечный сон - 11й альбом, создан в 2025г.
+                Работа уходит корнями в прошлое и дописанна спустя время, несёт на обложке автопортрет: зрение которого течёт и исходит почвой.
+                Грибы напоминают о неком единстве мира.
+                Волны с крестами уносят цвет и поглащаются в чёрно-белые проблески.
+                Альбом напоминает о скоротечности жизни, которую многие осознают слишком поздно.
+            </p>
+        </div>
+    </div>
+    <h1>Песни альбома Вечный сон</h1>
+    <div class="track-list">
+        <p>Вечный сон</p>
+        <audio controls>
+            <source src="/static/music/eternal-sleep/01%20Вечный%20сон.mp3" type="audio/mpeg">
+        </audio>
+        <p>Холодный труп</p>
+        <audio controls>
+            <source src="/static/music/eternal-sleep/02%20Холодный%20труп.mp3" type="audio/mpeg">
+        </audio>
+        <p>Зелёный ковёр</p>
+        <audio controls>
+            <source src="/static/music/eternal-sleep/03%20Зелёный%20ковёр.mp3" type="audio/mpeg">
+        </audio>
+        <p>Осколки</p>
+        <audio controls>
+            <source src="/static/music/eternal-sleep/04%20Осколки.mp3" type="audio/mpeg">
+        </audio>
+        <p>Эркер</p>
+        <audio controls>
+            <source src="/static/music/eternal-sleep/05%20Эркер.mp3" type="audio/mpeg">
+        </audio>
+        <p>Рождаться и умирать</p>
+        <audio controls>
+            <source src="/static/music/eternal-sleep/06%20Рождаться%20и%20умирать.mp3" type="audio/mpeg">
+        </audio>
+        <p>Под покровом контроля</p>
+        <audio controls>
+            <source src="/static/music/eternal-sleep/07%20Под%20покровом%20контроля.mp3" type="audio/mpeg">
+        </audio>
+        <p>Волны текущего кладбища</p>
+        <audio controls>
+            <source src="/static/music/eternal-sleep/08%20Волны%20текущего%20кладбища.mp3" type="audio/mpeg">
+        </audio>
+    </div>
 </div>
 </body>
 
