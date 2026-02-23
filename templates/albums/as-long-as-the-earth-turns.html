@@ -2,32 +2,181 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel = "stylesheet" href="css.css">
     <title>Пыточный Механизм альбом Покуда вертится земля</title>
-    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <style>
+        @font-face {
+            font-family: 'GOST2304';
+            src: url('/static/fonts/gost_2.304_Bold.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
         body {
+            font-family: 'GOST2304';
             background-image: url('/static/background.jpg');
             background-position: center;
             background-attachment: fixed;
             background-size: cover;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            box-sizing: border-box;
         }
         .white-card {
             background: white;
-            padding: 40px;
             border-radius: 10px;
-            max-width: 800px;
-            margin: 300px auto;
+            max-width: 1200px;
+            width: 100%;
             min-height: 1000px;
+            padding: 40px;
+            margin-top: 300px;
+            margin-bottom: 50px;
+        }
+        .image-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .image-row img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+        }
+        .text-block  {
+            width: 100%;
+            word-wrap: break-word;
+            min-width: 0;
+            margin: 0 0 10px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
+            font-size: 29px;
+        }
+        .text-row p {
+            margin: 0;
+            color: #666;
+        }
+        .back-link {
+            margin-bottom: 30px;
+        }
+        .back-link a {
+            text-decoration: none;
+            color: #666;
+            font-size: 20px;
+        }
+        .back-link a:hover{
+            color: #000;
+            font-size: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 40px;
+            font-family: 'GOST2304';
+        }
+        .track-list p {
+            margin: 15px 0 5px 0;
+            font-weight: bold;
+            color: #444;
+        }
+        .track-list a {
+            text-decoration: none;
+            color: #333;
+            font-size: 26px;
+            display: inline-block;
+            width: 200px;
+        }
+        
+        .track-list a:hover {
+            color: #000;
+            font-weight: bold;
+        }
+        
+        audio {
+            width: 100%;
+            margin-bottom: 25px;
         }
     </style>
 </head>
 <body>
 <div class="white-card">
-    <h1>Альбом Покуда вертится земля</h1>
-    <a href="/">
-        <button>На главную</button>
-    </a>
+    <div class="back-link">
+        <a href="/albums">
+            К альбомам
+        </a>
+    </div>
+    <div class="image-row">
+        <img src="/static/Beyond-the-walls-of-the-system.jpg" alt="Описание">
+        <div class="text-block">
+            <h2>Альбом Покуда вертится земля</h2>
+            <p>
+                Покуда вертится земля - 12й альбом, создан в 2025г.
+                Отчётливо показано: что люди живут в рамках религий, армий и государств, кажется, что если бы этого небыло то земля бы остановилась.
+                Они не представляют себе существования вне этих конструктов и догм. Альбом - не протест и не призыв к свержению.
+                Это крик отчаяния и смеси с аналитикой, чтобы хотя-бы на миг оторваться от притяжения земли слушая этот альбом и параллельно смотря на огромную цену в виде намеренно сложеных человеческих костей.
+                Символика альбома не призывает к уверованию, а лишь показывает личный похуизм к человеческим потолкам и порогам.
+            </p>
+        </div>
+    </div>
+    <h1>Песни альбома Покуда вертится земля</h1>
+    <div class="track-list">
+        <p>Одни враги кругом</p>
+        <audio controls>
+            <source src="/static/music/beyond-the-walls-of-the-system/01%20Одни%20враги%20кругом.mp3" type="audio/mpeg">
+        </audio>
+        <p>Говном на стене</p>
+        <audio controls>
+            <source src="/static/music/beyond-the-walls-of-the-system/02%20Говном%20на%20стене.mp3" type="audio/mpeg">
+        </audio>
+        <p>Блядовы дети</p>
+        <audio controls>
+            <source src="/static/music/beyond-the-walls-of-the-system/03%20Блядовы%20дети.mp3" type="audio/mpeg">
+        </audio>
+        <p>Религия - Бред</p>
+        <audio controls>
+            <source src="/static/music/beyond-the-walls-of-the-system/04%20Религия%20-%20Бред.mp3" type="audio/mpeg">
+        </audio>
+        <p>Не по духу мне</p>
+        <audio controls>
+            <source src="/static/music/beyond-the-walls-of-the-system/05%20Не%20по%20духу%20мне.mp3" type="audio/mpeg">
+        </audio>
+        <p>Чернила</p>
+        <audio controls>
+            <source src="/static/music/beyond-the-walls-of-the-system/06%20Чернила.mp3" type="audio/mpeg">
+        </audio>
+        <p>Кровавый закат</p>
+        <audio controls>
+            <source src="/static/music/beyond-the-walls-of-the-system/07%20Кровавый%20закат.mp3" type="audio/mpeg">
+        </audio>
+        <p>Последний патрон</p>
+        <audio controls>
+            <source src="/static/music/beyond-the-walls-of-the-system/08%20Последний%20патрон.mp3" type="audio/mpeg">
+        </audio>
+        <p>Моя сатаническая армия</p>
+        <audio controls>
+            <source src="/static/music/beyond-the-walls-of-the-system/08%20Моя%20сатаническая%20армия.mp3" type="audio/mpeg">
+        </audio>
+        <p>Нас не отмыть</p>
+        <audio controls>
+            <source src="/static/music/beyond-the-walls-of-the-system/08%20Нас%20не%20отмыть.mp3" type="audio/mpeg">
+        </audio>
+        <p>Бинарная тошнота</p>
+        <audio controls>
+            <source src="/static/music/beyond-the-walls-of-the-system/08%20Бинарная%20тошнота.mp3" type="audio/mpeg">
+        </audio>
+        <p>Прах сахарного ангела</p>
+        <audio controls>
+            <source src="/static/music/beyond-the-walls-of-the-system/08%20Прах%20сахарного%20ангела.mp3" type="audio/mpeg">
+        </audio>
+        <p>Покуда вертится земля</p>
+        <audio controls>
+            <source src="/static/music/beyond-the-walls-of-the-system/08%20Покуда%20вертится%20земля.mp3" type="audio/mpeg">
+        </audio>
+    </div>
 </div>
 </body>
 
