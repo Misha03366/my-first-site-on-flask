@@ -2,32 +2,184 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel = "stylesheet" href="css.css">
     <title>Пыточный Механизм альбом Созвездие спирали</title>
-    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <style>
+        @font-face {
+            font-family: 'GOST2304';
+            src: url('/static/fonts/gost_2.304_Bold.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
         body {
+            font-family: 'GOST2304';
             background-image: url('/static/background.jpg');
             background-position: center;
             background-attachment: fixed;
             background-size: cover;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            box-sizing: border-box;
         }
         .white-card {
             background: white;
-            padding: 40px;
             border-radius: 10px;
-            max-width: 800px;
-            margin: 300px auto;
+            max-width: 1200px;
+            width: 100%;
             min-height: 1000px;
+            padding: 40px;
+            margin-top: 300px;
+            margin-bottom: 50px;
+        }
+        .image-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .image-row img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+        }
+        .text-block  {
+            width: 100%;
+            word-wrap: break-word;
+            min-width: 0;
+            margin: 0 0 10px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
+            font-size: 29px;
+        }
+        .text-row p {
+            margin: 0;
+            color: #666;
+        }
+        .back-link {
+            margin-bottom: 30px;
+        }
+        .back-link a {
+            text-decoration: none;
+            color: #666;
+            font-size: 20px;
+        }
+        .back-link a:hover{
+            color: #000;
+            font-size: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 40px;
+            font-family: 'GOST2304';
+        }
+        .track-list p {
+            margin: 15px 0 5px 0;
+            font-weight: bold;
+            color: #444;
+        }
+        .track-list a {
+            text-decoration: none;
+            color: #333;
+            font-size: 26px;
+            display: inline-block;
+            width: 200px;
+        }
+        
+        .track-list a:hover {
+            color: #000;
+            font-weight: bold;
+        }
+        
+        audio {
+            width: 100%;
+            margin-bottom: 25px;
         }
     </style>
 </head>
 <body>
 <div class="white-card">
-    <h1>Альбом Созвездие спирали</h1>
-    <a href="/">
-        <button>На главную</button>
-    </a>
+    <div class="back-link">
+        <a href="/albums">
+            К альбомам
+        </a>
+    </div>
+    <div class="image-row">
+        <img src="/static/The-spiral-constellation.jpg" alt="Описание">
+        <div class="text-block">
+            <h2>Альбом Созвездие спирали</h2>
+            <p>
+                "Созвездие спирали" - 10-й альбом, создан в 2025г.
+                Вдохновлён книгой Ганса Эриха Носсака "Спираль", попытка вернуться к нормальной жизни, когда нормальной жизни больше нет.
+                Равносильно невозможности вырваться из колеи, где катастрофа стала нормой, а движение - иллюзией.
+                Петля по инерции - дыра заполненная работой, развлечениями, религией, политикой, но спираль продолжает раскручиваться вокруг пустоты, а созвездие лишь способ разглядеть порядок в хаосе, соединяя точки случайных событий в осмысленный узор.
+            </p>
+        </div>
+    </div>
+    <h1>Песни альбома Созвездие спирали</h1>
+    <div class="track-list">
+        <p>Созвездие спирали</p>
+        <audio controls>
+            <source src="/static/music/the-spiral-constellation/01%20Созвездие%20спирали.mp3" type="audio/mpeg">
+        </audio>
+        <p>Без потолка</p>
+        <audio controls>
+            <source src="/static/music/the-spiral-constellation/02%20Без%20потолка.mp3" type="audio/mpeg">
+        </audio>
+        <p>И продолжая по кругу</p>
+        <audio controls>
+            <source src="/static/music/the-spiral-constellation/03%20И%20продолжая%20по%20кругу.mp3" type="audio/mpeg">
+        </audio>
+        <p>Клетка смысла</p>
+        <audio controls>
+            <source src="/static/music/the-spiral-constellation/04%20Клетка%20смысла.mp3" type="audio/mpeg">
+        </audio>
+        <p>Времени нет</p>
+        <audio controls>
+            <source src="/static/music/the-spiral-constellation/05%20Времени%20нет.mp3" type="audio/mpeg">
+        </audio>
+        <p>Хочется спать</p>
+        <audio controls>
+            <source src="/static/music/the-spiral-constellation/06%20Хочется%20спать.mp3" type="audio/mpeg">
+        </audio>
+        <p>В преддверии тёплого ветра</p>
+        <audio controls>
+            <source src="/static/music/the-spiral-constellation/07%20В%20преддверии%20тёплого ветра.mp3" type="audio/mpeg">
+        </audio>
+        <p>Осталось лишь небо</p>
+        <audio controls>
+            <source src="/static/music/the-spiral-constellation/08%20Осталось%20лишь%20небо.mp3" type="audio/mpeg">
+        </audio>
+        <p>Мне так виднее</p>
+        <audio controls>
+            <source src="/static/music/the-spiral-constellation/09%20Мне%20так%20виднее.mp3" type="audio/mpeg">
+        </audio>
+        <p>Диамагнетик</p>
+        <audio controls>
+            <source src="/static/music/the-spiral-constellation/10%20Диамагнетик.mp3" type="audio/mpeg">
+        </audio>
+        <p>Отвозит в тупик</p>
+        <audio controls>
+            <source src="/static/music/the-spiral-constellation/11%20Отвозит%20в%20тупик.mp3" type="audio/mpeg">
+        </audio>
+        <p>Точка опоры (Fate's take me to hell)</p>
+        <audio controls>
+            <source src="/static/music/the-spiral-constellation/12%20Точка%20опоры%20(Fate's%20take%20me%20to%20hell).mp3" type="audio/mpeg">
+        </audio>
+        <p>Не могу без тебя</p>
+        <audio controls>
+            <source src="/static/music/the-spiral-constellation/13%20Не могу без тебя.mp3" type="audio/mpeg">
+        </audio>
+        <p>Так коротка</p>
+        <audio controls>
+            <source src="/static/music/the-spiral-constellation/14%20Так коротка.mp3" type="audio/mpeg">
+        </audio>
+    </div>
 </div>
 </body>
 
