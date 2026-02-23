@@ -2,32 +2,187 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel = "stylesheet" href="css.css">
     <title>Пыточный Механизм альбом Арсенал</title>
-    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <style>
+        @font-face {
+            font-family: 'GOST2304';
+            src: url('/static/fonts/gost_2.304_Bold.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
         body {
+            font-family: 'GOST2304';
             background-image: url('/static/background.jpg');
             background-position: center;
             background-attachment: fixed;
             background-size: cover;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            box-sizing: border-box;
         }
         .white-card {
             background: white;
-            padding: 40px;
             border-radius: 10px;
-            max-width: 800px;
-            margin: 300px auto;
+            max-width: 1200px;
+            width: 100%;
             min-height: 1000px;
+            padding: 40px;
+            margin-top: 300px;
+            margin-bottom: 50px;
+        }
+        .image-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .image-row img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+        }
+        .text-block  {
+            width: 100%;
+            word-wrap: break-word;
+            min-width: 0;
+            margin: 0 0 10px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
+            font-size: 29px;
+        }
+        .text-row p {
+            margin: 0;
+            color: #666;
+        }
+        .back-link {
+            margin-bottom: 30px;
+        }
+        .back-link a {
+            text-decoration: none;
+            color: #666;
+            font-size: 20px;
+        }
+        .back-link a:hover{
+            color: #000;
+            font-size: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 40px;
+            font-family: 'GOST2304';
+        }
+        .track-list p {
+            margin: 15px 0 5px 0;
+            font-weight: bold;
+            color: #444;
+        }
+        .track-list a {
+            text-decoration: none;
+            color: #333;
+            font-size: 26px;
+            display: inline-block;
+            width: 200px;
+        }
+        
+        .track-list a:hover {
+            color: #000;
+            font-weight: bold;
+        }
+        
+        audio {
+            width: 100%;
+            margin-bottom: 25px;
         }
     </style>
 </head>
 <body>
 <div class="white-card">
-    <h1>Альбом Арсенал</h1>
-    <a href="/">
-        <button>На главную</button>
-    </a>
+    <div class="back-link">
+        <a href="/albums">
+            К альбомам
+        </a>
+    </div>
+    <div class="image-row">
+        <img src="/static/Arsenal.jpg" alt="Описание">
+        <div class="text-block">
+            <h2>Альбом Арсенал</h2>
+            <p>
+                Арсенал - 7й альбом, создан в 2025г. Чёрная обложка со стальным текстом, звездой по центру и орнаментом из колючей проволоки.
+                Альбом - обойма: песни как пули, собранное для боя, который никто не выиграет.
+                Политическая тематика продолжает линию «Тени победы», но смещает акцент: люди не просто становятся жертвами обстоятельств, а намеренно выбирают заложничество в собственном раю, который их же и убивает.
+            </p>
+        </div>
+    </div>
+    <h1>Песни альбома Арсенал</h1>
+    <div class="track-list">
+        <p>Арсенал</p>
+        <audio controls>
+            <source src="/static/music/kaleidoscopes-of-consciousness/01%20Арсенал.mp3" type="audio/mpeg">
+        </audio>
+        <p>Заложники рая</p>
+        <audio controls>
+            <source src="/static/music/kaleidoscopes-of-consciousness/02%20Заложники рая.mp3" type="audio/mpeg">
+        </audio>
+        <p>По зубам</p>
+        <audio controls>
+            <source src="/static/music/kaleidoscopes-of-consciousness/03%20По зубам.mp3" type="audio/mpeg">
+        </audio>
+        <p>Решетка (Государства - тюрьмы)</p>
+        <audio controls>
+            <source src="/static/music/kaleidoscopes-of-consciousness/04%20Решетка (Государства - тюрьмы).mp3" type="audio/mpeg">
+        </audio>
+        <p>Империя зла</p>
+        <audio controls>
+            <source src="/static/music/kaleidoscopes-of-consciousness/05%20Империя зла.mp3" type="audio/mpeg">
+        </audio>
+        <p>Эхо</p>
+        <audio controls>
+            <source src="/static/music/kaleidoscopes-of-consciousness/06%20Эхо.mp3" type="audio/mpeg">
+        </audio>
+        <p>Плач</p>
+        <audio controls>
+            <source src="/static/music/kaleidoscopes-of-consciousness/07%20Плач.mp3" type="audio/mpeg">
+        </audio>
+        <p>Хуй на вас</p>
+        <audio controls>
+            <source src="/static/music/kaleidoscopes-of-consciousness/08%20Хуй на вас.mp3" type="audio/mpeg">
+        </audio>
+        <p>Голуби</p>
+        <audio controls>
+            <source src="/static/music/kaleidoscopes-of-consciousness/09%20Голуби.mp3" type="audio/mpeg">
+        </audio>
+        <p>Смертельное руководство [Заруби]</p>
+        <audio controls>
+            <source src="/static/music/kaleidoscopes-of-consciousness/10%20Смертельное руководство [Заруби].mp3" type="audio/mpeg">
+        </audio>
+        <p>Наружу</p>
+        <audio controls>
+            <source src="/static/music/kaleidoscopes-of-consciousness/11%20Наружу.mp3" type="audio/mpeg">
+        </audio>
+        <p>Флаг моего государства</p>
+        <audio controls>
+            <source src="/static/music/kaleidoscopes-of-consciousness/12%20Флаг моего государства.mp3" type="audio/mpeg">
+        </audio>
+        <p>Пушечного мяса</p>
+        <audio controls>
+            <source src="/static/music/kaleidoscopes-of-consciousness/13%20Пушечного мяса.mp3" type="audio/mpeg">
+        </audio>
+        <p>Дорогой запад</p>
+        <audio controls>
+            <source src="/static/music/kaleidoscopes-of-consciousness/14%20Дорогой запад.mp3" type="audio/mpeg">
+        </audio>
+        <p>Ленинштейн</p>
+        <audio controls>
+            <source src="/static/music/kaleidoscopes-of-consciousness/15%20Ленинштейн.mp3" type="audio/mpeg">
+        </audio>
+    </div>
 </div>
 </body>
 
