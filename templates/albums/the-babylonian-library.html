@@ -2,32 +2,177 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel = "stylesheet" href="css.css">
     <title>Пыточный Механизм альбом Вавилонская библиотека</title>
-    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <style>
+        @font-face {
+            font-family: 'GOST2304';
+            src: url('/static/fonts/gost_2.304_Bold.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
         body {
+            font-family: 'GOST2304';
             background-image: url('/static/background.jpg');
             background-position: center;
             background-attachment: fixed;
             background-size: cover;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            box-sizing: border-box;
         }
         .white-card {
             background: white;
-            padding: 40px;
             border-radius: 10px;
-            max-width: 800px;
-            margin: 300px auto;
+            max-width: 1200px;
+            width: 100%;
             min-height: 1000px;
+            padding: 40px;
+            margin-top: 300px;
+            margin-bottom: 50px;
+        }
+        .image-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .image-row img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+        }
+        .text-block  {
+            width: 100%;
+            word-wrap: break-word;
+            min-width: 0;
+            margin: 0 0 10px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
+            font-size: 29px;
+        }
+        .text-row p {
+            margin: 0;
+            color: #666;
+        }
+        .back-link {
+            margin-bottom: 30px;
+        }
+        .back-link a {
+            text-decoration: none;
+            color: #666;
+            font-size: 20px;
+        }
+        .back-link a:hover{
+            color: #000;
+            font-size: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 40px;
+            font-family: 'GOST2304';
+        }
+        .track-list p {
+            margin: 15px 0 5px 0;
+            font-weight: bold;
+            color: #444;
+        }
+        .track-list a {
+            text-decoration: none;
+            color: #333;
+            font-size: 26px;
+            display: inline-block;
+            width: 200px;
+        }
+        
+        .track-list a:hover {
+            color: #000;
+            font-weight: bold;
+        }
+        
+        audio {
+            width: 100%;
+            margin-bottom: 25px;
         }
     </style>
 </head>
 <body>
 <div class="white-card">
-    <h1>Альбом Вавилонская библиотека</h1>
-    <a href="/">
-        <button>На главную</button>
-    </a>
+    <div class="back-link">
+        <a href="/albums">
+            К альбомам
+        </a>
+    </div>
+    <div class="image-row">
+        <img src="/static/The-babylonian-library.jpg" alt="Описание">
+        <div class="text-block">
+            <h2>Альбом Вавилонская библиотека</h2>
+            <p>
+                Вавилонская библиотека - 9й альбом, создан в 2025г.
+                Вдохновлён одноимённым произведением Хорхе Луиса Борхеса.
+                Альбом интерпретирует идеи Борхеса как в нашу, так и в любую эпоху.
+                Бесконечный поток информации, во многом коммуникативной, в котором нет священной книги, нет истины, а есть только данные. Истина без мудрости - sqrt пустышки.
+                Повод указать другим на их порочное существование, будучи вне «правильного», потому что внутри системы правда сомнительна, как и внутри самой жизни, жизнь - система.
+            </p>
+        </div>
+    </div>
+    <h1>Песни альбома Вавилонская библиотека</h1>
+    <div class="track-list">
+        <p>Колючие стены</p>
+        <audio controls>
+            <source src="/static/music/the-babylonian-library/01%20Колючие%20стены.mp3" type="audio/mpeg">
+        </audio>
+        <p>Так как же</p>
+        <audio controls>
+            <source src="/static/music/the-babylonian-library/02%20Так%20как%20же.mp3" type="audio/mpeg">
+        </audio>
+        <p>Плоская земля</p>
+        <audio controls>
+            <source src="/static/music/the-babylonian-library/03%20Плоская%20земля.mp3" type="audio/mpeg">
+        </audio>
+        <p>Тщетно</p>
+        <audio controls>
+            <source src="/static/music/the-babylonian-library/04%20Тщетно.mp3" type="audio/mpeg">
+        </audio>
+        <p>Азбука вкуса</p>
+        <audio controls>
+            <source src="/static/music/the-babylonian-library/05%20Азбука%20вкуса.mp3" type="audio/mpeg">
+        </audio>
+        <p>Поверьте</p>
+        <audio controls>
+            <source src="/static/music/the-babylonian-library/06%20Поверьте.mp3" type="audio/mpeg">
+        </audio>
+        <p>Истина под книгами</p>
+        <audio controls>
+            <source src="/static/music/the-babylonian-library/07%20Истина%20под%20книгами.mp3" type="audio/mpeg">
+        </audio>
+        <p>Математика мозга</p>
+        <audio controls>
+            <source src="/static/music/the-babylonian-library/08%20Математика%20мозга.mp3" type="audio/mpeg">
+        </audio>
+        <p>Непостижимые волокна абсурда</p>
+        <audio controls>
+            <source src="/static/music/the-babylonian-library/09%20Непостижимые%20волокна%20абсурда.mp3" type="audio/mpeg">
+        </audio>
+        <p>Сам себе механизм</p>
+        <audio controls>
+            <source src="/static/music/the-babylonian-library/10%20Сам%20себе%20механизм.mp3" type="audio/mpeg">
+        </audio>
+        <p>Рациональная критика</p>
+        <audio controls>
+            <source src="/static/music/the-babylonian-library/11%20Рациональная%20критика.mp3" type="audio/mpeg">
+        </audio>
+        <p>Вавилонская литера</p>
+        <audio controls>
+            <source src="/static/music/the-babylonian-library/12%20Вавилонская%20литера.mp3" type="audio/mpeg">
+        </audio>
+    </div>
 </div>
 </body>
 
