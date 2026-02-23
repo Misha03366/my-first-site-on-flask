@@ -2,32 +2,190 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel = "stylesheet" href="css.css">
-    <title>Пыточный Механизм альбом Черное зеркало</title>
-    <title>{% block title %}{% endblock %}</title>
+    <title>Пыточный Механизм альбом Чёрное зеркало</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <style>
+        @font-face {
+            font-family: 'GOST2304';
+            src: url('/static/fonts/gost_2.304_Bold.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
         body {
+            font-family: 'GOST2304';
             background-image: url('/static/background.jpg');
             background-position: center;
             background-attachment: fixed;
             background-size: cover;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            box-sizing: border-box;
         }
         .white-card {
             background: white;
-            padding: 40px;
             border-radius: 10px;
-            max-width: 800px;
-            margin: 300px auto;
+            max-width: 1200px;
+            width: 100%;
             min-height: 1000px;
+            padding: 40px;
+            margin-top: 300px;
+            margin-bottom: 50px;
+        }
+        .image-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .image-row img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+        }
+        .text-block  {
+            width: 100%;
+            word-wrap: break-word;
+            min-width: 0;
+            margin: 0 0 10px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
+            font-size: 29px;
+        }
+        .text-row p {
+            margin: 0;
+            color: #666;
+        }
+        .back-link {
+            margin-bottom: 30px;
+        }
+        .back-link a {
+            text-decoration: none;
+            color: #666;
+            font-size: 20px;
+        }
+        .back-link a:hover{
+            color: #000;
+            font-size: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 40px;
+            font-family: 'GOST2304';
+        }
+        .track-list p {
+            margin: 15px 0 5px 0;
+            font-weight: bold;
+            color: #444;
+        }
+        .track-list a {
+            text-decoration: none;
+            color: #333;
+            font-size: 26px;
+            display: inline-block;
+            width: 200px;
+        }
+        
+        .track-list a:hover {
+            color: #000;
+            font-weight: bold;
+        }
+        
+        audio {
+            width: 100%;
+            margin-bottom: 25px;
         }
     </style>
 </head>
 <body>
 <div class="white-card">
-    <h1>Альбом Черное зеркало</h1>
-    <a href="/">
-        <button>На главную</button>
-    </a>
+    <div class="back-link">
+        <a href="/albums">
+            К альбомам
+        </a>
+    </div>
+    <div class="image-row">
+        <img src="/static/The-black-mirror.jpg" alt="Описание">
+        <div class="text-block">
+            <h2>Альбом Чёрное зеркало</h2>
+            <p>
+                Чёрное зеркало - 8й альбом, создан в 2025г. Отсылка на сериал "Black Mirror".
+                Работа об узости человеческого восприятия и способности адаптироваться к любой реальности, не замечая её возможной искусственности.
+                Центр обложки и есть чёрное зеркало среди хаотичного пространства.
+                Смотря в него, мы видим не себя, а отражение реальности, которую приняли за свою из сложности симулякров.
+                И человек не задумывается: чьё имя он носит и где кончается адаптация и начинается плен.
+                Отражаясь в чёрном зеркале, принимая нечто за своё.
+            </p>
+        </div>
+    </div>
+    <h1>Песни альбома Чёрное зеркало</h1>
+    <div class="track-list">
+        <p>Чёрное зеркало</p>
+        <audio controls>
+            <source src="/static/music/the-black-mirror/01%20Чёрное%20зеркало.mp3" type="audio/mpeg">
+        </audio>
+        <p>Гул со дна</p>
+        <audio controls>
+            <source src="/static/music/the-black-mirror/02%20Гул%20со%20дна.mp3" type="audio/mpeg">
+        </audio>
+        <p>Пустое место</p>
+        <audio controls>
+            <source src="/static/music/the-black-mirror/03%20Пустое%20место.mp3" type="audio/mpeg">
+        </audio>
+        <p>Будь правдой снова</p>
+        <audio controls>
+            <source src="/static/music/the-black-mirror/04%20Будь%20правдой%20снова.mp3" type="audio/mpeg">
+        </audio>
+        <p>Чужие личности</p>
+        <audio controls>
+            <source src="/static/music/the-black-mirror/05%20Чужие%20личности.mp3" type="audio/mpeg">
+        </audio>
+        <p>Повадки от холода</p>
+        <audio controls>
+            <source src="/static/music/the-black-mirror/06%20Повадки%20от%20холода.mp3" type="audio/mpeg">
+        </audio>
+        <p>Мыльница</p>
+        <audio controls>
+            <source src="/static/music/the-black-mirror/07%20Мыльница.mp3" type="audio/mpeg">
+        </audio>
+        <p>Второе имя</p>
+        <audio controls>
+            <source src="/static/music/the-black-mirror/08%20Второе%20имя.mp3" type="audio/mpeg">
+        </audio>
+        <p>По те привидения падения</p>
+        <audio controls>
+            <source src="/static/music/the-black-mirror/09%20По%20те%20привидения падения.mp3" type="audio/mpeg">
+        </audio>
+        <p>Липкая память</p>
+        <audio controls>
+            <source src="/static/music/the-black-mirror/10%20Липкая%20память.mp3" type="audio/mpeg">
+        </audio>
+        <p>Пятнадцать миллионов намёков</p>
+        <audio controls>
+            <source src="/static/music/the-black-mirror/11%20Пятнадцать%20миллионов%20намёков.mp3" type="audio/mpeg">
+        </audio>
+        <p>Виртуально</p>
+        <audio controls>
+            <source src="/static/music/the-black-mirror/12%20Виртуально.mp3" type="audio/mpeg">
+        </audio>
+        <p>Грифель карандаша</p>
+        <audio controls>
+            <source src="/static/music/the-black-mirror/13%20Грифель%20карандаша.mp3" type="audio/mpeg">
+        </audio>
+        <p>Смерть на зарядке</p>
+        <audio controls>
+            <source src="/static/music/the-black-mirror/14%20Смерть%20на%20зарядке.mp3" type="audio/mpeg">
+        </audio>
+        <p>Смирись и танцуй</p>
+        <audio controls>
+            <source src="/static/music/the-black-mirror/15%20Смирись%20и%20танцуй.mp3" type="audio/mpeg">
+        </audio>
+    </div>
 </div>
 </body>
 
