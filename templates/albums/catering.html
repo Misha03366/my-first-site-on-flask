@@ -2,32 +2,133 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel = "stylesheet" href="css.css">
     <title>Пыточный Механизм альбом Общепит</title>
-    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <style>
+        @font-face {
+            font-family: 'GOST2304';
+            src: url('/static/fonts/gost_2.304_Bold.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
         body {
+            font-family: 'GOST2304';
             background-image: url('/static/background.jpg');
             background-position: center;
             background-attachment: fixed;
             background-size: cover;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            box-sizing: border-box;
         }
         .white-card {
             background: white;
-            padding: 40px;
             border-radius: 10px;
-            max-width: 800px;
-            margin: 300px auto;
+            max-width: 1200px;
+            width: 100%;
             min-height: 1000px;
+            padding: 40px;
+            margin-top: 300px;
+            margin-bottom: 50px;
+        }
+        .image-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .image-row img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+        }
+        .text-block  {
+            width: 100%;
+            word-wrap: break-word;
+            min-width: 0;
+            margin: 0 0 10px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
+            font-size: 29px;
+        }
+        .text-row p {
+            margin: 0;
+            color: #666;
+        }
+        .back-link {
+            margin-bottom: 30px;
+        }
+        .back-link a {
+            text-decoration: none;
+            color: #666;
+            font-size: 20px;
+        }
+        .back-link a:hover{
+            color: #000;
+            font-size: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 40px;
+            font-family: 'GOST2304';
+        }
+        .track-list p {
+            margin: 15px 0 5px 0;
+            font-weight: bold;
+            color: #444;
+        }
+        .track-list a {
+            text-decoration: none;
+            color: #333;
+            font-size: 26px;
+            display: inline-block;
+            width: 200px;
+        }
+        
+        .track-list a:hover {
+            color: #000;
+            font-weight: bold;
+        }
+        
+        audio {
+            width: 100%;
+            margin-bottom: 25px;
         }
     </style>
 </head>
 <body>
 <div class="white-card">
-    <h1>Альбом Общепит</h1>
-    <a href="/">
-        <button>На главную</button>
-    </a>
+    <div class="back-link">
+        <a href="/albums">
+            К альбомам
+        </a>
+    </div>
+    <div class="image-row">
+        <img src="/static/catering.jpg" alt="Описание">
+        <div class="text-block">
+            <h2>Альбом Общепит</h2>
+            <p>
+                "Общепит" - 0й альбом, создан в 2022/23г.
+                Альбом уходящий корнями в проект "Полигон", предшественник Пыточного Механизма. Альбом песен - однодневок о жизни тогдашних участников коллектива.
+                Смысловую нагрузку в исполнении и оформлении не преследует.
+                Многие песни были утрачены или убиты временем как и множество других песен из альбомов полигона.
+                Планируется в дальнейшей перезаписи.
+            </p>
+        </div>
+    </div>
+    <h1>Песни альбома Общепит</h1>
+    <div class="track-list">
+        <p>Я живу как хочу магнитном Вильма м 1</p>
+        <audio controls>
+            <source src="/static/music/catering/01%20Я%20живу%20как%20хочу%20магнитном%20Вильма%20м%201.mp3" type="audio/mpeg">
+        </audio>
+    </div>
 </div>
 </body>
 
