@@ -17,6 +17,10 @@ def discography():
 def albums():
     return render_template('albums.html')
 
+@app.route('/akkords')
+def albums():
+    return render_template('akkords.html')
+
 
 @app.route('/albums/animal-instinct')
 def animal_instinct():
@@ -85,6 +89,7 @@ def catering():
 
 if __name__ == "__main__":
     app.run()
+
 
 
 
