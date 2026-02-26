@@ -18,7 +18,7 @@ def albums():
     return render_template('albums.html')
 
 @app.route('/akkords')
-def albums():
+def akkords():
     return render_template('akkords.html')
 
 
@@ -89,6 +89,7 @@ def catering():
 
 if __name__ == "__main__":
     app.run()
+
 
 
 
