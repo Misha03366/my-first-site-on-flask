@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel = "stylesheet" href="css.css">
-    <title>Пыточный Механизм аккорды</title>
+    <title>Аккорды — Пыточный Механизм</title>
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <style>
         @font-face {
@@ -13,7 +12,7 @@
             font-style: normal;
         }
         body {
-            font-family: 'GOST2304';
+            font-family: 'GOST2304', Arial, sans-serif;
             background-image: url('/static/background.jpg');
             background-position: center;
             background-attachment: fixed;
@@ -32,60 +31,104 @@
             background-position: center;
             background-repeat: no-repeat;
             border-radius: 10px;
-            max-width: 1200px;
+            max-width: 1400px;
             width: 100%;
             min-height: 1000px;
             padding: 40px;
-            margin-top: 300px;
+            margin-top: 200px;
             margin-bottom: 50px;
+            color: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
         }
-
-        .white-card h1,
-        .white-card a,
-        .white-card p {
+        .white-card h1, .white-card h2, .white-card p, .white-card a {
             color: white;
         }
         .back-link {
             margin-bottom: 30px;
         }
-        .black-link a {
-            text-decoration: none;
+        .back-link a {
             color: white;
-            font-size: 26px;
+            text-decoration: none;
+            font-size: 20px;
         }
         .back-link a:hover {
-            color: white;
-            font-weught: bold;
-        }
-        h1 {
-            color: white;
-            margin-bottom: 40px;
-        }
-        h2 {
-            color: white;
-            margin: 40px 0 20px 0;
-        }
-        .album-links p {
-            margin: 15px 0;
-        }
-        .album-links a {
-            text-decoration: none;
-            color: white;
-            font-size: 23px;
-            display: inline-block;
-            width: 300px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .album-links a:hover {
-            color: white;
             font-weight: bold;
         }
-
-        .poligon-section {
-            margin-top: 50px;
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .search-container {
+            margin: 30px 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+        #search {
+            padding: 15px 25px;
+            font-size: 18px;
+            border-radius: 50px;
+            border: 2px solid rgba(255,255,255,0.3);
+            background: rgba(0,0,0,0.5);
+            color: white;
+            width: 300px;
+            backdrop-filter: blur(5px);
+        }
+        #search::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+        .main-grid {
+            display: flex;
+            gap: 40px;
+        }
+        .left-alphabet {
+            width: 60%;
+        }
+        .right-search {
+            width: 40%;
+        }
+        .letter-section {
+            margin-bottom: 30px;
+        }
+        .letter-section h2 {
+            font-size: 32px;
+            border-bottom: 2px solid white;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        .song-item {
+            margin: 8px 0;
+        }
+        .song-item a {
+            text-decoration: none;
+            font-size: 20px;
+            transition: 0.2s;
+        }
+        .song-item a:hover {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        #search-results {
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(5px);
+            padding: 20px;
+            border-radius: 10px;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        .result-item {
+            margin: 10px 0;
+        }
+        .result-item a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            display: block;
+            padding: 8px;
+            border-radius: 5px;
+        }
+        .result-item a:hover {
+            background: rgba(255,255,255,0.2);
+            font-weight: bold;
         }
     </style>
 </head>
@@ -94,10 +137,327 @@
         <div class="back-link">
             <a href="/">На главную</a>
         </div>
-        <h1>Песни группы Пыточный Механизм</h1>
-        <p>Описание</p>
+        <h1>Аккорды</h1>
+<div class="main-grid">
+            <div class="left-alphabet" id="full-list">
+                <div class="letter-section">
+                    <h2>А</h2>
+                    <div class="song-item"><a href="/akkords/azbuka-vkusa">Азбука вкуса</a></div>
+                    <div class="song-item"><a href="/akkords/anarxiya-gravitacii">Анархия гравитации</a></div>
+                    <div class="song-item"><a href="/akkords/antitela">Антитела</a></div>
+                    <div class="song-item"><a href="/akkords/arsenal">Арсенал</a></div>
+                    <div class="song-item"><a href="/akkords/atrofirovannyj-vzglyad">Атрофированный взгляд</a></div>
+                </div>
+                <div class="letter-section">
+                    <h2>Б</h2>
+                    <div class="song-item"><a href="/akkords/bez-potolka">Без потолка</a></div>
+                    <div class="song-item"><a href="/akkords/beskonechnost-ne-predel">Бесконечность не предел</a></div>
+                    <div class="song-item"><a href="/akkords/binarnaya-toshnota">Бинарная тошнота</a></div>
+                    <div class="song-item"><a href="/akkords/bitoe-koryto">Битое корыто</a></div>
+                    <div class="song-item"><a href="/akkords/blyadovy-deti">Блядовы дети</a></div>
+                    <div class="song-item"><a href="/akkords/budet-laskovyj-dozhd">Будет ласковый дождь</a></div>
+                    <div class="song-item"><a href="/akkords/bud-pravdoj-snova">Будь правдой снова</a></div>
+                </div>
+                <div class="letter-section">
+                    <h2>В</h2>
+                    <div class="song-item"><a href="/akkords/vavilonskaya-litera">Вавилонская литера</a></div>
+                    <div class="song-item"><a href="/akkords/v-preddverii-teplogo-vetra">В преддверии тёплого ветра</a></div>
+                    <div class="song-item"><a href="/akkords/v-ramkah-zakona">В рамках закона</a></div>
+                    <div class="song-item"><a href="/akkords/vremeni-net">Времени нет</a></div>
+                    <div class="song-item"><a href="/akkords/vetvyami-nezhiti">Ветвями нежити</a></div>
+                    <div class="song-item"><a href="/akkords/vechnyj-son">Вечный сон</a></div>
+                    <div class="song-item"><a href="/akkords/vsyo-ravno">Всё равно</a></div>
+                    <div class="song-item"><a href="/akkords/vse">Все</a></div>
+                    <div class="song-item"><a href="/akkords/vse-putem">Все путем</a></div>
+                    <div class="song-item"><a href="/akkords/vtoroe-imya">Второе имя</a></div>
+                    <div class="song-item"><a href="/akkords/vokrug-tebya-lyubimaya">Вокруг тебя, любимая</a></div>
+                    <div class="song-item"><a href="/akkords/volna-patrioticheskogo-govna">Волна патриотического говна</a></div>
+                    <div class="song-item"><a href="/akkords/volny-tekushchego-kladbisha">Волны текущего кладбища</a></div>
+                    <div class="song-item"><a href="/akkords/vo-vne">Во вне</a></div>
+                    <div class="song-item"><a href="/akkords/voennyj-granit">Военный гранит</a></div>
+                    <div class="song-item"><a href="/akkords/vyugi-podzemnogo-sna">Вьюги подземного сна</a></div>
+                    <div class="song-item"><a href="/akkords/vybora-net">Выбора нет</a></div>
+                </div>
+                <div class="letter-section">
+                    <h2>Г</h2>
+                    <div class="song-item"><a href="/akkords/gde-pravit-rur">Где правит ₽o₽'$</a></div>
+                    <div class="song-item"><a href="/akkords/gemorroj">Геморрой</a></div>
+                    <div class="song-item"><a href="/akkords/geroicheskij-podvig">Героический подвиг</a></div>
+                    <div class="song-item"><a href="/akkords/govnom-na-stene">Говном на стене</a></div>
+                    <div class="song-item"><a href="/akkords/golubi">Голуби</a></div>
+                    <div class="song-item"><a href="/akkords/gorizonty-soznaniya">Горизонты сознания</a></div>
+                    <div class="song-item"><a href="/akkords/grani-myshleniya">Грани мышления</a></div>
+                    <div class="song-item"><a href="/akkords/grani-uvidit-gniyushij">Грани увидит гниющий</a></div>
+                    <div class="song-item"><a href="/akkords/grifel-karandasha">Грифель карандаша</a></div>
+                    <div class="song-item"><a href="/akkords/gul-so-dna">Гул со дна</a></div>
+                </div>
+                <div class="letter-section">
+                    <h2>Д</h2>
+                    <div class="song-item"><a href="/akkords/dazhe-kogda-menya-net">Даже когда меня нет</a></div>
+                    <div class="song-item"><a href="/akkords/diamagnetik">Диамагнетик</a></div>
+                    <div class="song-item"><a href="/akkords/dorogoj-zapad">Дорогой запад</a></div>
+                    <div class="song-item"><a href="/akkords/dryan">Дрянь</a></div>
+                </div>
+                <div class="letter-section">
+                    <h2>Е</h2>
+                    <div class="song-item"><a href="/akkords/edinichnost-dnej-gospodina-iz">Единичность дней господина из</a></div>
+                    <div class="song-item"><a href="/akkords/esli-vy">Если вы</a></div>
+                </div>
+                <div class="letter-section">
+                    <h2>Ж</h2>
+                    <div class="song-item"><a href="/akkords/zhivotnyj-instinkt">Животный инстинкт</a></div>
+                </div>
+                <div class="letter-section">
+                    <h2>З</h2>
+                    <div class="song-item"><a href="/akkords/za-sekundu-do">За секунду до</a></div>
+                    <div class="song-item"><a href="/akkords/za-stenami-sistemy">За стенами системы</a></div>
+                    <div class="song-item"><a href="/akkords/za-strahom-strah-cikl-bezyshodnosti">За страхом страх - Цикл безысходности</a></div>
+                    <div class="song-item"><a href="/akkords/zalozhniki-raya">Заложники рая</a></div>
+                    <div class="song-item"><a href="/akkords/zelyonyj-kovyor">Зелёный ковёр</a></div>
+                    <div class="song-item"><a href="/akkords/zona-komforta">Зона комфорта</a></div>
+                </div>
+                <div class="letter-section">
+                    <h2>И</h2>
+                    <div class="song-item"><a href="/akkords/i-prodolzhaya-po-krugu">И продолжая по кругу</a></div>
+                    <div class="song-item"><a href="/akkords/iz-niotkuda-v-nikuda">Из ниоткуда в никуда</a></div>
+                    <div class="song-item"><a href="/akkords/iz-kozhi-von-ot-vseh-storon">Из кожи вон от всех сторон</a></div>
+                    <div class="song-item"><a href="/akkords/izbegat">Избегать</a></div>
+                    <div class="song-item"><a href="/akkords/izolirovat">Изолировать</a></div>
+                    <div class="song-item"><a href="/akkords/imperiya-zla">Империя зла</a></div>
+                    <div class="song-item"><a href="/akkords/istina-pod-knigami">Истина под книгами</a></div>
+                </div>
+                <div class="letter-section">
+                    <h2>К</h2>
+                    <div class="song-item"><a href="/akkords/kazhdoj-tvari-po-pare">Каждой твари по паре</a></div>
+                    <div class="song-item"><a href="/akkords/kalejdoskopy-soznaniya">Калейдоскопы сознания</a></div>
+                    <div class="song-item"><a href="/akkords/kapitalnyj-genom">Капитальный геном</a></div>
+                    <div class="song-item"><a href="/akkords/kletka-smysla">Клетка смысла</a></div>
+                    <div class="song-item"><a href="/akkords/krovavyj-zakat">Кровавый закат</a></div>
+                    <div class="song-item"><a href="/akkords/krik-v-pustotu">Крик в пустоту</a></div>
+                    <div class="song-item"><a href="/akkords/krugovorot-govna-v-prirode">Круговорот говна в природе</a></div>
+                    <div class="song-item"><a href="/akkords/kukolnyj-vzglyad">Кукольный взгляд</a></div>
+                    <div class="song-item"><a href="/akkords/kuski-samogo-sebya">Куски самого себя</a></div>
+                    <div class="song-item"><a href="/akkords/konflikty-govna-i-mochi">Конфликты говна и мочи</a></div>
+                    <div class="song-item"><a href="/akkords/kolyuchie-steny">Колючие стены</a></div>
+                </div>
+                <div class="letter-section">
+                    <h2>Л</h2>
+                    <div class="song-item"><a href="/akkords/labirint">Лабиринт</a></div>
+                    <div class="song-item"><a href="/akkords/leninshtejn">Ленинштейн</a></div>
+                    <div class="song-item"><a href="/akkords/lestnica-v-nebo">Лестница в небо</a></div>
+                    <div class="song-item"><a href="/akkords/lipkaya-pamyat">Липкая память</a></div>
+                </div>
+                <div class="letter-section">
+                    <h2>М</h2>
+                    <div class="song-item"><a href="/akkords/matematika-mozga">Математика мозга</a></div>
+                    <div class="song-item"><a href="/akkords/materiya-sila">Материя - сила</a></div>
+                    <div class="song-item"><a href="/akkords/mesta-net">Места нет</a></div>
+                    <div class="song-item"><a href="/akkords/mne-tak-vidnee">Мне так виднее</a></div>
+                    <div class="song-item"><a href="/akkords/moya-satanicheskaya-armiya">Моя сатаническая армия</a></div>
+                    <div class="song-item"><a href="/akkords/mylnica">Мыльница</a></div>
+                </div>
+                <div class="letter-section">
+                    <h2>Н</h2>
+                    <div class="song-item"><a href="/akkords/na-drugih-etazhah">На других этажах</a></div>
+                    <div class="song-item"><a href="/akkords/na-zapadnom-fronte">На западном фронте</a></div>
+                    <div class="song-item"><a href="/akkords/na-peregonki-s-soboj">На перегонки с собой</a></div>
+                    <div class="song-item"><a href="/akkords/na-strunah-rassudka">На струнах рассудка</a></div>
+                    <div class="song-item"><a href="/akkords/nablyudaya-skvoz">Наблюдая сквозь</a></div>
+                    <div class="song-item"><a href="/akkords/naoborot">Наоборот</a></div>
+                    <div class="song-item"><a href="/akkords/naruzhu">Наружу</a></div>
+                    <div class="song-item"><a href="/akkords/nas-ne-otmyt">Нас не отмыть</a></div>
+                    <div class="song-item"><a href="/akkords/nasrat">Насрать</a></div>
+                    <div class="song-item"><a href="/akkords/ne-zahoteli-by">Не захотели бы</a></div>
+                    <div class="song-item"><a href="/akkords/ne-mogu-bez-tebya">Не могу без тебя</a></div>
+                    <div class="song-item"><a href="/akkords/ne-po-duhu-mne">Не по духу мне</a></div>
+                    <div class="song-item"><a href="/akkords/nekrolog">Некролог</a></div>
+                    <div class="song-item"><a href="/akkords/nepostizhimye-volokna-absurda">Непостижимые волокна абсурда</a></div>
+                    <div class="song-item"><a href="/akkords/nol-summy-haosa">Ноль суммы хаоса</a></div>
+                </div>
+                <div class="letter-section">
+                    <h2>О</h2>
+                    <div class="song-item"><a href="/akkords/oblachnyj-rov">Облачный ров</a></div>
+                    <div class="song-item"><a href="/akkords/odno-govno-drugomu-ne-ravno">Одно говно другому не равно</a></div>
+                    <div class="song-item"><a href="/akkords/odni-vragi-krugom">Одни враги кругом</a></div>
+                    <div class="song-item"><a href="/akkords/opiaty">Опиаты</a></div>
+                    <div class="song-item"><a href="/akkords/oskalki">Осколки</a></div>
+                    <div class="song-item"><a href="/akkords/ostalos-lis-nebo">Осталось лишь небо</a></div>
+                    <div class="song-item"><a href="/akkords/ostatsya-drugim">Остаться другим</a></div>
+                    <div class="song-item"><a href="/akkords/otverzhennye">Отверженные</a></div>
+                    <div class="song-item"><a href="/akkords/otvozit-v-tupik">Отвозит в тупик</a></div>
+                </div>
+                <div class="letter-section">
+                    <h2>П</h2>
+                    <div class="song-item"><a href="/akkords/paradoks">Парадокс</a></div>
+                    <div class="song-item"><a href="/akkords/patrioticheskij-bum">Патриотический бум</a></div>
+                    <div class="song-item"><a href="/akkords/pesni-zheltogo-vetra">Песни желтого ветра</a></div>
+                    <div class="song-item"><a href="/akkords/plach">Плач</a></div>
+                    <div class="song-item"><a href="/akkords/ploskaya-zemlya">Плоская земля</a></div>
+                    <div class="song-item"><a href="/akkords/po-zubam">По зубам</a></div>
+                    <div class="song-item"><a href="/akkords/po-te-privideniya-padeniya">По те привидения падения</a></div>
+                    <div class="song-item"><a href="/akkords/po-umolchaniya">По умолчания</a></div>
+                    <div class="song-item"><a href="/akkords/poverte">Поверьте</a></div>
+                    <div class="song-item"><a href="/akkords/povadki-ot-holoda">Повадки от холода</a></div>
+                    <div class="song-item"><a href="/akkords/pod-pokrovom-kontrolya">Под покровом контроля</a></div>
+                    <div class="song-item"><a href="/akkords/pod-potolkom">Под потолком</a></div>
+                    <div class="song-item"><a href="/akkords/pokuda-vertsya-zemlya">Покуда вертится земля</a></div>
+                    <div class="song-item"><a href="/akkords/poligon">Полигон</a></div>
+                    <div class="song-item"><a href="/akkords/poslednij-patron">Последний патрон</a></div>
+                    <div class="song-item"><a href="/akkords/poteryannyj-v-zerkah">Потерянный в зеркалах</a></div>
+                    <div class="song-item"><a href="/akkords/prah-saharnogo-angela">Прах сахарного ангела</a></div>
+                    <div class="song-item"><a href="/akkords/privychki-lyudej">Привычки людей</a></div>
+                    <div class="song-item"><a href="/akkords/propoved">Проповедь</a></div>
+                    <div class="song-item"><a href="/akkords/pustoe-mesto">Пустое место</a></div>
+                    <div class="song-item"><a href="/akkords/pushechnogo-myasa">Пушечного мяса</a></div>
+                    <div class="song-item"><a href="/akkords/pyatnadcat-millionov-namyokov">Пятнадцать миллионов намёков</a></div>
+                </div>
+                <div class="letter-section">
+                    <h2>Р</h2>
+                    <div class="song-item"><a href="/akkords/religiya-bred">Религия - Бред</a></div>
+                    <div class="song-item"><a href="/akkords/reshetka-gosudarstva-tyurmy">Решетка (Государства - тюрьмы)</a></div>
+                    <div class="song-item"><a href="/akkords/rozhdatsya-i-umirat">Рождаться и умирать</a></div>
+                    <div class="song-item"><a href="/akkords/russkomu-duhu">Русскому духу</a></div>
+                    <div class="song-item"><a href="/akkords/racionalnaya-kritika">Рациональная критика</a></div>
+                </div>
+                <div class="letter-section">
+                    <h2>С</h2>
+                    <div class="song-item"><a href="/akkords/sam-sebe-mehanizm">Сам себе механизм</a></div>
+                    <div class="song-item"><a href="/akkords/samotyok">Самотёк</a></div>
+                    <div class="song-item"><a href="/akkords/slovo-svoboda">Слово свобода</a></div>
+                    <div class="song-item"><a href="/akkords/smertelnoe-rukovodstvo-zarubi">Смертельное руководство [Заруби]</a></div>
+                    <div class="song-item"><a href="/akkords/smert-na-zaryadke">Смерть на зарядке</a></div>
+                    <div class="song-item"><a href="/akkords/smiris-i-tancuj">Смирись и танцуй</a></div>
+                    <div class="song-item"><a href="/akkords/sozvezdie-spirali">Созвездие спирали</a></div>
+                    <div class="song-item"><a href="/akkords/storonee-osveshenie">Сторонее освещение</a></div>
+                    <div class="song-item"><a href="/akkords/stoyat-kak-polozheno">Стоять как положено</a></div>
+                    <div class="song-item"><a href="/akkords/strojka-i-molot">Стройка и молот</a></div>
+                </div>
+                <div class="letter-section">
+                    <h2>Т</h2>
+                    <div class="song-item"><a href="/akkords/tak-zhe-kak">Так же как</a></div>
+                    <div class="song-item"><a href="/akkords/tak-korotka">Так коротка</a></div>
+                    <div class="song-item"><a href="/akkords/tam-gde-my-est">Там где мы есть</a></div>
+                    <div class="song-item"><a href="/akkords/telo-pomnit-vsyo">Тело помнит всё</a></div>
+                    <div class="song-item"><a href="/akkords/temnotoj-naprolyot">Темнотой напролёт</a></div>
+                    <div class="song-item"><a href="/akkords/teni-pobedy">Тени победы</a></div>
+                    <div class="song-item"><a href="/akkords/tihij-chas">Тихий час</a></div>
+                    <div class="song-item"><a href="/akkords/tochka-nevozvrata">Точка невозврата</a></div>
+                    <div class="song-item"><a href="/akkords/tochka-opory-fate-s-take-me-to-hell">Точка опоры (Fate's take me to hell)</a></div>
+                    <div class="song-item"><a href="/akkords/triumfalnyj-organzm">Триумфальный оргазм</a></div>
+                    <div class="song-item"><a href="/akkords/tumannye">Туманные</a></div>
+                    <div class="song-item"><a href="/akkords/tshchetno">Тщетно!</a></div>
+                    <div class="song-item"><a href="/akkords/telstar-cover">Telstar [Cover на The Tornados]</a></div>
+                </div>
+                <div class="letter-section">
+                    <h2>Ф</h2>
+                    <div class="song-item"><a href="/akkords/faust-obmana">Фауст обмана</a></div>
+                    <div class="song-item"><a href="/akkords/flag-moego-gosudarstva">Флаг моего государства</a></div>
+                </div>
+                <div class="letter-section">
+                    <h2>Х</h2>
+                    <div class="song-item"><a href="/akkords/holodnyj-trup">Холодный труп</a></div>
+                    <div class="song-item"><a href="/akkords/hochetsya-spat">Хочется спать</a></div>
+                    <div class="song-item"><a href="/akkords/huj-na-vas">Хуй на вас</a></div>
+                </div>
+                <div class="letter-section">
+                    <h2>Ч</h2>
+                    <div class="song-item"><a href="/akkords/chelovecheskij-faktor">Человеческий фактор</a></div>
+                    <div class="song-item"><a href="/akkords/chernila">Чернила</a></div>
+                    <div class="song-item"><a href="/akkords/chyornoe-zerkalo">Чёрное зеркало</a></div>
+                    <div class="song-item"><a href="/akkords/chuzhie-lichnosti">Чужие личности</a></div>
+                    <div class="song-item"><a href="/akkords/chuma-ot-protivnogo">Чума от противного</a></div>
+                </div>
+                <div class="letter-section">
+                    <h2>Э</h2>
+                    <div class="song-item"><a href="/akkords/erker">Эркер</a></div>
+                    <div class="song-item"><a href="/akkords/estet">Эстет</a></div>
+                    <div class="song-item"><a href="/akkords/effekt-prisutstviya">Эффект присутствия</a></div>
+                    <div class="song-item"><a href="/akkords/eho">Эхо</a></div>
+                    <div class="song-item"><a href="/akkords/eksgumaciya-byl-by-rad">Эксгумация [Был бы рад]</a></div>
+                </div>
+            </div>
+            <div class="right-search">
+                <input type="text" id="search" placeholder="Найти песню..." autocomplete="off">
+                <div id="search-results">
+                    <p style="color: rgba(255,255,255,0.7);">Начните вводить название...</p>
+                </div>
+            </div>
+        </div>
     </div>
-</body>
 
+    <script>
+        const songs = [
+            "Азбука вкуса", "Анархия гравитации", "Антитела", "Арсенал", "Атрофированный взгляд",
+            "Без потолка", "Бесконечность не предел", "Бинарная тошнота", "Битое корыто", "Блядовы дети",
+            "Будет ласковый дождь", "Будь правдой снова", "Вавилонская литера", "В преддверии тёплого ветра",
+            "В рамках закона", "Времени нет", "Ветвями нежити", "Вечный сон", "Всё равно", "Все",
+            "Все путем", "Второе имя", "Вокруг тебя, любимая", "Волна патриотического говна",
+            "Волны текущего кладбища", "Во вне", "Военный гранит", "Вьюги подземного сна", "Выбора нет",
+            "Где правит ₽o₽'$", "Геморрой", "Героический подвиг", "Говном на стене", "Голуби",
+            "Горизонты сознания", "Грани мышления", "Грани увидит гниющий", "Грифель карандаша", "Гул со дна",
+            "Даже когда меня нет", "Диамагнетик", "Дорогой запад", "Дрянь",
+            "Единичность дней господина из", "Если вы", "Животный инстинкт", "За секунду до",
+            "За стенами системы", "За страхом страх - Цикл безысходности", "Заложники рая", "Зелёный ковёр",
+            "Зона комфорта", "И продолжая по кругу", "Из ниоткуда в никуда", "Из кожи вон от всех сторон",
+            "Избегать", "Изолировать", "Империя зла", "Истина под книгами", "Каждой твари по паре",
+            "Калейдоскопы сознания", "Капитальный геном", "Клетка смысла", "Кровавый закат", "Крик в пустоту",
+            "Круговорот говна в природе", "Кукольный взгляд", "Куски самого себя", "Конфликты говна и мочи",
+            "Колючие стены", "Лабиринт", "Ленинштейн", "Лестница в небо", "Липкая память",
+            "Математика мозга", "Материя - сила", "Места нет", "Мне так виднее", "Моя сатаническая армия",
+            "Мыльница", "На других этажах", "На западном фронте", "На перегонки с собой",
+            "На струнах рассудка", "Наблюдая сквозь", "Наоборот", "Наружу", "Нас не отмыть", "Насрать",
+            "Не захотели бы", "Не могу без тебя", "Не по духу мне", "Некролог",
+            "Непостижимые волокна абсурда", "Ноль суммы хаоса", "Облачный ров", "Одно говно другому не равно",
+            "Одни враги кругом", "Опиаты", "Осколки", "Осталось лишь небо", "Остаться другим", "Отверженные",
+            "Отвозит в тупик", "Парадокс", "Патриотический бум", "Песни желтого ветра", "Плач",
+            "Плоская земля", "По зубам", "По те привидения падения", "По умолчания", "Поверьте",
+            "Повадки от холода", "Под покровом контроля", "Под потолком", "Покуда вертится земля", "Полигон",
+            "Последний патрон", "Потерянный в зеркалах", "Прах сахарного ангела", "Привычки людей", "Проповедь",
+            "Пустое место", "Пушечного мяса", "Пятнадцать миллионов намёков", "Религия - Бред",
+            "Решетка (Государства - тюрьмы)", "Рождаться и умирать", "Русскому духу", "Сам себе механизм",
+            "Самотёк", "Слово свобода", "Смертельное руководство [Заруби]", "Смерть на зарядке",
+            "Смирись и танцуй", "Созвездие спирали", "Сторонее освещение", "Стоять как положено",
+            "Стройка и молот", "Так же как", "Так коротка", "Там где мы есть", "Тело помнит всё",
+            "Темнотой напролёт", "Тени победы", "Тихий час", "Точка невозврата",
+            "Точка опоры (Fate's take me to hell)", "Триумфальный оргазм", "Туманные", "Тщетно!",
+            "Telstar [Cover на The Tornados]", "Фауст обмана", "Флаг моего государства", "Холодный труп",
+            "Хочется спать", "Хуй на вас", "Человеческий фактор", "Чернила", "Чёрное зеркало", "Чужие личности",
+            "Чума от противного", "Эркер", "Эстет", "Эффект присутствия", "Эхо", "Эксгумация [Был бы рад]",
+            "Рациональная критика"
+        ];
+
+        const searchInput = document.getElementById('search');
+        const resultsDiv = document.getElementById('search-results');
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase().trim();
+            
+            if (query === '') {
+                resultsDiv.innerHTML = '<p style="color: rgba(255,255,255,0.7);">Начните вводить название...</p>';
+                return;
+            }
+
+            const filtered = songs.filter(song => 
+                song.toLowerCase().includes(query)
+            );
+
+            if (filtered.length === 0) {
+                resultsDiv.innerHTML = '<p style="color: #ff9999;">Ничего не найдено</p>';
+                return;
+            }
+
+            let html = '';
+            filtered.forEach(song => {
+                const url = '/akkords/' + song.toLowerCase()
+                    .replace(/[\.!',$@%&*()\[\]?+]/g, '')
+                    .replace(/[^a-zа-яё0-9\s-]/gi, '')
+                    .replace(/\s+/g, '-');
+                html += <div class="result-item"><a href="${url}">${song}</a></div>;
+            });
+            resultsDiv.innerHTML = html;
+        });
+    </script>
+</body>
 </html>
+
 
