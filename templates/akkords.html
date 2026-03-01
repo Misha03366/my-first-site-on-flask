@@ -108,7 +108,7 @@
             text-decoration: underline;
         }
         #search-results {
-            background: rgba(0,0,0,0.6);
+            background: rgba(0,0,0,0.9) !important;
             backdrop-filter: blur(5px);
             padding: 20px;
             border-radius: 10px;
@@ -452,12 +452,13 @@
                     .replace(/[\.!',$@%&*()\[\]?+]/g, '')
                     .replace(/[^a-zа-яё0-9\s-]/gi, '')
                     .replace(/\s+/g, '-');
-                html += <div class="result-item"><a href="${url}">${song}</a></div>;
+                html += `<div class="result-item"><a href="${url}">${song}</a></div>`;
             });
             resultsDiv.innerHTML = html;
         });
     </script>
 </body>
 </html>
+
 
 
