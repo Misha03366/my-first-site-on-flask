@@ -22,7 +22,7 @@ def akkords():
     return render_template('akkords.html')
 
 @app.route('/akkords/<song>')
-def song_akkord(song)
+def song_akkord(song):
     return render_template(f'akkordy/{song}.html')
 
 @app.route('/albums/animal-instinct')
@@ -92,6 +92,7 @@ def catering():
 
 if __name__ == "__main__":
     app.run()
+
 
 
 
